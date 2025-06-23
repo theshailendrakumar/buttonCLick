@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>background changer</title>
+    <title>Background changer</title>
     <style>
     button{
     font-size: 1rem;
@@ -27,33 +27,21 @@ p{
 </head>
 <body>
     
-    <p>Let's see how quickly you can click nonstop.</p>
-<button onclick="change()">Click - Hurry</button>
+    <p>Small Projects</p>
+<button onclick="change()">Background Changer</button>
 
 
 <script>
     function change() {
-    let a = Math.floor(Math.random()*10)
-    let b = Math.floor(Math.random()*10)
-    let c = Math.floor(Math.random()*10)
+    let a = Math.floor(Math.random()*100)
+    let b = Math.floor(Math.random()*100)
+    let c = Math.floor(Math.random()*100)
     let d = Math.floor(Math.random()*10)
-    let sum = `  ${a}${b}${c}${d}  `
+    let sum = ` rgb(${a},${b},${c},${d})  `
    let para = document.createElement("p");
    para.innerText = sum;
    let body = document.querySelector("body");
-   body.append(para)
-   para.style.fontFamily = "Poppins";
-   para.style.fontFamily = "";
-
-   
-   para.style.color= "red"
-   console.log(sum)
-   para.setAttribute("class", "otp");
-   let sel = document.querySelector(".otp");
-   setTimeout(() => {
-    sel.remove();
-   },100)
-
+ body.style.backgroundColor = "sum";
 }
 </script>
     <script src="app.js"></script>
