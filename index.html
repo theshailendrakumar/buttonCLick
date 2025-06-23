@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background changer</title>
+    <style>
+    button{
+    font-size: 1rem;
+    border-radius: 20px;
+    padding: 12px;
+    border: none;
+    color: red;
+    font-weight: 700;
+    background-color: rgb(21, 247, 171);
+
+}
+
+p{
+    font-family: "Poppins";
+    font-size: 1.7rem;
+}</style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <p>Let's see how quickly you can click nonstop.</p>
+<button onclick="change()">Click - Hurry</button>
+
+
+<script>
+    function change() {
+    let a = Math.floor(Math.random()*10)
+    let b = Math.floor(Math.random()*10)
+    let c = Math.floor(Math.random()*10)
+    let d = Math.floor(Math.random()*10)
+    let sum = `your OTP is   ${a}${b}${c}${d}  `
+   let para = document.createElement("p");
+   para.innerText = sum;
+   let body = document.querySelector("body");
+   body.append(para)
+   para.style.fontFamily = "Poppins";
+   para.style.fontFamily = "";
+
+   
+   para.style.color= "red"
+   console.log(sum)
+   para.setAttribute("class", "otp");
+   let sel = document.querySelector(".otp");
+   setTimeout(() => {
+    sel.remove();
+   },100)
+
+}
+</script>
+    <script src="app.js"></script>
+</body>
+</html>
